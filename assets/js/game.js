@@ -113,7 +113,7 @@ var shop = function() {
             window.alert("Leaving the store.");
             break
         default:
-            windowl.alert("You did not pick a valid option. Try again.");
+            window.alert("You did not pick a valid option. Try again.");
             shop();
             break;
     }
@@ -124,8 +124,18 @@ var randomNumber = function(min, max) {
     return value;
 }
 
+var getPlayerName = function() {
+    var name = "";
+    while (name === "" || name === null) {
+        name = prompt("What is your robot's name?")
+    }
+
+    console.log("Your robot's name is " + name);
+    return name;
+}
+
 var playerInfo = {
-    name: window.prompt("What is your robot's name"),
+    name: getPlayerName(),
     health: 100,
     money: 10, 
     attack: 10,
